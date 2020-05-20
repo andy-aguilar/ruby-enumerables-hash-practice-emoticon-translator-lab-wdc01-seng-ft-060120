@@ -12,10 +12,16 @@ end
 
 def get_japanese_emoticon(file, english_emoticon)
   emoticon_library = load_library(file)
+  test_array = []
   emoticon_library.each do |english_meaning, hash_of_emoticons|
     if hash_of_emoticons.value?(english_emoticon)
       return hash_of_emoticons[:japanese]
+    else 
+      test_array << "x"
     end
+  end
+  if test_array.length == emoticon_library.size
+    return "Sorry"
   end
 end
 

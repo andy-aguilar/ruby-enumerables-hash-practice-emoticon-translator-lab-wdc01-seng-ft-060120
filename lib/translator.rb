@@ -21,7 +21,7 @@ def get_japanese_emoticon(file, english_emoticon)
     end
   end
   if test_array.length == emoticon_library.size
-    return "Sorry"
+    return "Sorry, that emoticon was not found"
   end
 end
 
